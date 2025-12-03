@@ -84,6 +84,7 @@ export function Hero() {
                   theme === "neo" && "neo-button rounded-none h-14 px-8 text-lg",
                   theme === "swiss" && "bg-black text-white rounded-none hover:bg-accent h-16 px-10 text-xl"
                 )}
+                onClick={() => window.open("/Michael_Thomas_Resume_2026.pdf", "_blank")}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
