@@ -34,7 +34,7 @@ export const resumeData = {
     },
     {
       role: "Sales / Assistant to Operations Manager",
-      company: "Ultimate Car Wash (LYFT)",
+      company: "Ultimate Car Wash",
       location: "East Point, GA",
       period: "Jan 2019 - Oct 2019",
       achievements: [
