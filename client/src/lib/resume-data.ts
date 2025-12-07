@@ -46,7 +46,7 @@ export const resumeData = {
     },
     {
       title: "Cybersecurity Threat Intelligence Platform",
-      description: "Built a threat intelligence aggregation platform that collects and analyzes IOCs from multiple feeds, providing actionable insights for the SOC team.",
+      description: "Built a centralized threat intelligence aggregation platform that automates the collection, normalization, and analysis of Indicators of Compromise (IOCs) from multiple open-source and proprietary feeds. The system features a real-time dashboard for visualizing threat data, automated alert generation for high-severity indicators, and API integration with existing SIEM tools to streamline incident response workflows for the SOC team.",
       technologies: ["Python", "Django", "PostgreSQL", "API Integration"],
       link: "https://github.com/mltmacster/threat-intel-platform",
       image: "/images/project-placeholder.png"
