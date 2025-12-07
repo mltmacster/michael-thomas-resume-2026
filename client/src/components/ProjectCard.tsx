@@ -9,9 +9,10 @@ interface ProjectCardProps {
   technologies: string[];
   link?: string;
   image?: string;
+  challenges?: string[];
 }
 
-export function ProjectCard({ title, description, technologies, link, image }: ProjectCardProps) {
+export function ProjectCard({ title, description, technologies, link, image, challenges }: ProjectCardProps) {
   const { theme } = useTheme();
 
   return (
@@ -63,14 +64,37 @@ export function ProjectCard({ title, description, technologies, link, image }: P
           </a>
         )}
       </div>
-      
       <p className={cn(
-        "text-sm mb-4",
-        theme === "glass" && "text-muted-foreground",
-        theme === "neo" && "text-gray-600 font-medium",
-        theme === "swiss" && "text-gray-600 text-base"
-      )}>{description}</p>
+        "text-sm mb-4 leading-relaxed",
+        theme === "glass" && "text-white/70",
+        theme === "neo" && "text-black font-mono",
+        theme === "swiss" && "text-gray-600 font-light"
+      )}>
+        {description}
+      </p>
 
+      {challenges && challenges.length > 0 && (
+        <div className="mb-4">
+          <h4 className={cn(
+            "text-sm font-semibold mb-2",
+            theme === "glass" && "text-white/90",
+            theme === "neo" && "text-black font-bold uppercase",
+            theme === "swiss" && "text-black font-medium"
+          )}>
+            Challenges Overcome:
+          </h4>
+          <ul className={cn(
+            "list-disc list-inside space-y-1 text-sm",
+            theme === "glass" && "text-white/70",
+            theme === "neo" && "text-black font-mono",
+            theme === "swiss" && "text-gray-600 font-light"
+          )}>
+            {challenges.map((challenge, index) => (
+              <li key={index}>{challenge}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (
           <Badge 
