@@ -141,6 +141,7 @@ export const resumeData = {
       name: "Google Cybersecurity Specialization",
       date: "March 2024",
       id: "ADM73Z6KYURM",
+      link: "https://www.coursera.org/account/accomplishments/specialization/ADM73Z6KYURM",
       details: "Comprehensive 8-course series covering Network Security, Linux, SQL, Python, Assets, Threats, and Vulnerabilities, Detection and Response."
     },
     {

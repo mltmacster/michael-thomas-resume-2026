@@ -91,6 +91,21 @@ export default function Home() {
                         "text-xs font-mono opacity-70",
                         theme === "neo" && "bg-white inline-block px-1 border border-black text-black font-bold"
                       )}>ID: {cert.id}</p>
+                      {cert.link && (
+                        <a 
+                          href={cert.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "text-xs mt-2 inline-flex items-center gap-1 hover:underline",
+                            theme === "glass" && "text-primary",
+                            theme === "neo" && "text-black font-bold underline decoration-2",
+                            theme === "swiss" && "text-blue-600 font-medium"
+                          )}
+                        >
+                          Verify Credential →
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
