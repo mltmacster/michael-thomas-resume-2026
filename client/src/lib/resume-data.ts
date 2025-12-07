@@ -18,7 +18,12 @@ export const resumeData = {
     "Firewall Configuration",
     "Intrusion Detection",
     "Malware Removal",
-    "Hardware Inventory"
+    "Hardware Inventory",
+    "Python for Cybersecurity",
+    "Linux & SQL",
+    "SIEM Tools",
+    "Incident Response",
+    "Risk Management"
   ],
   experience: [
     {
@@ -132,6 +137,12 @@ export const resumeData = {
     }
   ],
   certifications: [
+    {
+      name: "Google Cybersecurity Specialization",
+      date: "March 2024",
+      id: "ADM73Z6KYURM",
+      details: "Comprehensive 8-course series covering Network Security, Linux, SQL, Python, Assets, Threats, and Vulnerabilities, Detection and Response."
+    },
     {
       name: "CompTIA Security+ 2008",
       date: "Nov 2010",
