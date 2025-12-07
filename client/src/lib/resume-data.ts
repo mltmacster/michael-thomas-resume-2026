@@ -25,6 +25,26 @@ export const resumeData = {
     "Incident Response",
     "Risk Management"
   ],
+  projects: [
+    {
+      title: "Automated Security Auditing Script",
+      description: "Developed a Python script to automate the auditing of user permissions and file access logs on Linux servers, reducing manual audit time by 40%.",
+      technologies: ["Python", "Linux", "Bash"],
+      link: "#"
+    },
+    {
+      title: "Network Traffic Analysis Dashboard",
+      description: "Configured a SIEM dashboard using Splunk to visualize network traffic patterns and identify potential security anomalies in real-time.",
+      technologies: ["Splunk", "Networking", "Data Visualization"],
+      link: "#"
+    },
+    {
+      title: "Secure Cloud Infrastructure Deployment",
+      description: "Designed and deployed a secure VPC architecture on Google Cloud Platform, implementing firewall rules and IAM policies to adhere to least privilege principles.",
+      technologies: ["GCP", "Terraform", "IAM"],
+      link: "#"
+    }
+  ],
   experience: [
     {
       role: "Uber Driver",

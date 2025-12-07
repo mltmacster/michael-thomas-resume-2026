@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { ResumeSection } from "@/components/ResumeSection";
 import { ExperienceCard } from "@/components/ExperienceCard";
+import { ProjectCard } from "@/components/ProjectCard";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { resumeData } from "@/lib/resume-data";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -38,6 +39,18 @@ export default function Home() {
                 >
                   {skill}
                 </Badge>
+              ))}
+            </div>
+          </ResumeSection>
+
+          {/* Projects Section */}
+          <ResumeSection title="Projects" delay={0.25}>
+            <div className={cn(
+              "grid grid-cols-1 md:grid-cols-2 gap-6",
+              theme === "swiss" && "grid-cols-1 gap-8"
+            )}>
+              {resumeData.projects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
               ))}
             </div>
           </ResumeSection>
