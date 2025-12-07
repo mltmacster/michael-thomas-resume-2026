@@ -43,6 +43,13 @@ export const resumeData = {
       description: "Designed and deployed a secure VPC architecture on Google Cloud Platform, implementing firewall rules and IAM policies to adhere to least privilege principles.",
       technologies: ["GCP", "Terraform", "IAM"],
       link: "#"
+    },
+    {
+      title: "Cybersecurity Threat Intelligence Platform",
+      description: "Built a threat intelligence aggregation platform that collects and analyzes IOCs from multiple feeds, providing actionable insights for the SOC team.",
+      technologies: ["Python", "Django", "PostgreSQL", "API Integration"],
+      link: "https://github.com/mltmacster/threat-intel-platform",
+      image: "/images/project-placeholder.png"
     }
   ],
   experience: [

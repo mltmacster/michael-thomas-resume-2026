@@ -8,9 +8,10 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   link?: string;
+  image?: string;
 }
 
-export function ProjectCard({ title, description, technologies, link }: ProjectCardProps) {
+export function ProjectCard({ title, description, technologies, link, image }: ProjectCardProps) {
   const { theme } = useTheme();
 
   return (
@@ -20,6 +21,19 @@ export function ProjectCard({ title, description, technologies, link }: ProjectC
       theme === "neo" && "border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rounded-none",
       theme === "swiss" && "border-t border-black pt-4 rounded-none p-0"
     )}>
+      {image && (
+        <div className={cn(
+          "mb-4 overflow-hidden rounded-lg",
+          theme === "neo" && "rounded-none border-2 border-black mb-4",
+          theme === "swiss" && "rounded-none mb-4"
+        )}>
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      )}
       <div className="flex items-start justify-between gap-4 mb-3">
         <div className="flex items-center gap-3">
           <div className={cn(
