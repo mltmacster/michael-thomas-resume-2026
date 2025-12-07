@@ -23,7 +23,7 @@ export const resumeData = {
   experience: [
     {
       role: "Uber Driver",
-      company: "LYFT",
+      company: "Uber",
       location: "Atlanta, GA",
       period: "June 2018 - Present",
       achievements: [
