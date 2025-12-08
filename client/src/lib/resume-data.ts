@@ -8,23 +8,32 @@ export const resumeData = {
     linkedin: "in/michael-thomas-it0406",
     summary: "Experienced IT professional with expertise in Information Technology, Networking, Cybersecurity, and Customer Service. Committed to industry best practices with a proven track record of enhancing customer service, improving operational efficiency, and implementing robust security solutions. Strong background in network infrastructure, system deployment, technical support, and team leadership."
   },
-  skills: [
-    "Network Infrastructure",
-    "Cybersecurity",
-    "Google Cloud Platform",
-    "System Deployment",
-    "Technical Support",
-    "Team Leadership",
-    "Firewall Configuration",
-    "Intrusion Detection",
-    "Malware Removal",
-    "Hardware Inventory",
-    "Python for Cybersecurity",
-    "Linux & SQL",
-    "SIEM Tools",
-    "Incident Response",
-    "Risk Management"
-  ],
+  skills: {
+    technical: [
+      "Network Infrastructure",
+      "Cybersecurity",
+      "Google Cloud Platform",
+      "System Deployment",
+      "Firewall Configuration",
+      "Intrusion Detection",
+      "Malware Removal",
+      "Python for Cybersecurity",
+      "Linux & SQL",
+      "SIEM Tools",
+      "Incident Response",
+      "Risk Management"
+    ],
+    soft: [
+      "Team Leadership",
+      "Technical Support",
+      "Customer Service",
+      "Problem Solving",
+      "Communication",
+      "Time Management",
+      "Adaptability",
+      "Critical Thinking"
+    ]
+  },
   projects: [
     {
       title: "Automated Security Auditing Script",
