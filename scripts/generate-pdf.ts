@@ -240,7 +240,11 @@ async function generatePDF() {
           <div class="project-item">
             <div class="project-header">
               <span class="project-title">${project.title}</span>
-              ${project.link && project.link !== '#' ? `<a href="${project.link}" style="font-size: 12px;">View Project</a>` : ''}
+              <div style="display: flex; gap: 8px;">
+                ${project.demo ? `<a href="${project.demo}" style="font-size: 12px;">Live Demo</a>` : ''}
+                ${project.video ? `<a href="${project.video}" style="font-size: 12px;">Watch Video</a>` : ''}
+                ${project.link && project.link !== '#' ? `<a href="${project.link}" style="font-size: 12px;">View Code</a>` : ''}
+              </div>
             </div>
             <p class="project-desc">${project.description}</p>
             ${project.challenges ? `

@@ -39,19 +39,23 @@ export const resumeData = {
       title: "Automated Security Auditing Script",
       description: "Developed a Python script to automate the auditing of user permissions and file access logs on Linux servers, reducing manual audit time by 40%.",
       technologies: ["Python", "Linux", "Bash"],
-      link: "#"
+      link: "https://github.com/mltmacster/security-audit-script",
+      demo: "https://asciinema.org/a/demo-id",
+      video: "https://www.youtube.com/embed/demo-video-id"
     },
     {
       title: "Network Traffic Analysis Dashboard",
       description: "Configured a SIEM dashboard using Splunk to visualize network traffic patterns and identify potential security anomalies in real-time.",
       technologies: ["Splunk", "Networking", "Data Visualization"],
-      link: "#"
+      link: "#",
+      video: "https://www.youtube.com/embed/splunk-demo-id"
     },
     {
       title: "Secure Cloud Infrastructure Deployment",
       description: "Designed and deployed a secure VPC architecture on Google Cloud Platform, implementing firewall rules and IAM policies to adhere to least privilege principles.",
       technologies: ["GCP", "Terraform", "IAM"],
-      link: "#"
+      link: "#",
+      demo: "https://gcp-architecture-demo.com"
     },
     {
       title: "Cybersecurity Threat Intelligence Platform",
@@ -59,6 +63,8 @@ export const resumeData = {
       technologies: ["Python", "Django", "PostgreSQL", "API Integration"],
       link: "https://github.com/mltmacster/threat-intel-platform",
       image: "/images/project-placeholder.png",
+      demo: "https://threat-intel-platform-demo.herokuapp.com",
+      video: "https://www.youtube.com/embed/threat-intel-demo",
       challenges: [
         "Optimized database queries to handle high-volume threat feeds, reducing data ingestion time by 60%.",
         "Implemented a custom normalization engine to unify disparate data formats from 15+ different threat intelligence sources.",
