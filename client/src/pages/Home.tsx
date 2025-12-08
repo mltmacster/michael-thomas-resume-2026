@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import { ResumeSection } from "@/components/ResumeSection";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Skills } from "@/components/Skills";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { resumeData } from "@/lib/resume-data";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -26,10 +25,22 @@ export default function Home() {
         )}>
           {/* Skills Section */}
           <ResumeSection title="Core Competencies" delay={0.2}>
-            <Skills 
-              technical={resumeData.skills.technical} 
-              soft={resumeData.skills.soft} 
-            />
+            <div className="flex flex-wrap gap-3">
+              {resumeData.skills.map((skill, index) => (
+                <Badge 
+                  key={index}
+                  variant="secondary"
+                  className={cn(
+                    "text-base py-2 px-4 transition-all hover:scale-105 cursor-default",
+                    theme === "glass" && "bg-white/5 hover:bg-primary/20 border border-white/10 text-white",
+                    theme === "neo" && "bg-white border-2 border-black text-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-mono font-bold",
+                    theme === "swiss" && "bg-gray-100 text-black rounded-none hover:bg-accent hover:text-white text-lg font-normal"
+                  )}
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
           </ResumeSection>
 
           {/* Projects Section */}

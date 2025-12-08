@@ -9,7 +9,6 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
-  base: "/",
   plugins,
   resolve: {
     alias: {
@@ -41,10 +40,5 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
-  },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
   },
 });

@@ -1,9 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Badge } from "@/components/ui/badge";
-import { FolderGit2, ExternalLink, Play, Monitor } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import { FolderGit2, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -12,11 +10,9 @@ interface ProjectCardProps {
   link?: string;
   image?: string;
   challenges?: string[];
-  demo?: string;
-  video?: string;
 }
 
-export function ProjectCard({ title, description, technologies, link, image, challenges, demo, video }: ProjectCardProps) {
+export function ProjectCard({ title, description, technologies, link, image, challenges }: ProjectCardProps) {
   const { theme } = useTheme();
 
   return (
@@ -54,79 +50,19 @@ export function ProjectCard({ title, description, technologies, link, image, cha
             theme === "swiss" && "text-xl leading-tight"
           )}>{title}</h3>
         </div>
-        <div className="flex gap-2">
-          {video && (
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  className={cn(
-                    "h-8 w-8",
-                    theme === "glass" && "text-white/70 hover:text-white hover:bg-white/10",
-                    theme === "neo" && "text-black hover:bg-primary/20 rounded-none border border-transparent hover:border-black",
-                    theme === "swiss" && "text-gray-500 hover:text-black"
-                  )}
-                >
-                  <Play className="w-4 h-4" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className={cn(
-                "sm:max-w-[800px]",
-                theme === "glass" && "bg-black/90 border-white/20 text-white backdrop-blur-xl",
-                theme === "neo" && "bg-white border-4 border-black rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]",
-                theme === "swiss" && "bg-white rounded-none border-none shadow-2xl"
-              )}>
-                <DialogHeader>
-                  <DialogTitle className={cn(
-                    theme === "neo" && "font-mono uppercase",
-                    theme === "swiss" && "font-light tracking-tight"
-                  )}>{title} - Demo</DialogTitle>
-                </DialogHeader>
-                <div className="aspect-video w-full mt-4">
-                  <iframe 
-                    src={video} 
-                    className="w-full h-full rounded-lg" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-          )}
-          {demo && (
-            <a 
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                "inline-flex items-center justify-center h-8 w-8 rounded-md transition-colors",
-                theme === "glass" && "text-white/70 hover:text-white hover:bg-white/10",
-                theme === "neo" && "text-black hover:bg-primary/20 rounded-none border border-transparent hover:border-black",
-                theme === "swiss" && "text-gray-500 hover:text-black"
-              )}
-              title="Live Demo"
-            >
-              <Monitor className="w-4 h-4" />
-            </a>
-          )}
-          {link && link !== "#" && (
-            <a 
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                "inline-flex items-center justify-center h-8 w-8 rounded-md transition-colors",
-                theme === "glass" && "text-white/70 hover:text-white hover:bg-white/10",
-                theme === "neo" && "text-black hover:bg-primary/20 rounded-none border border-transparent hover:border-black",
-                theme === "swiss" && "text-gray-500 hover:text-black"
-              )}
-              title="View Code"
-            >
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          )}
-        </div>
+        {link && link !== "#" && (
+          <a 
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "text-muted-foreground hover:text-primary transition-colors",
+              theme === "neo" && "text-black hover:text-primary"
+            )}
+          >
+            <ExternalLink className="w-5 h-5" />
+          </a>
+        )}
       </div>
       <p className={cn(
         "text-sm mb-4 leading-relaxed",
